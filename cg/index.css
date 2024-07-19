@@ -1,0 +1,164 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: #272727;
+  color: white;
+  font-family: "Baloo 2", cursive;
+}
+body .animate {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+body .animate .anim {
+  margin-top: 10vh;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .animate .anim .hero {
+  width: 100%;
+  height: 0;
+}
+body .animate .anim .hero img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .animate .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(144, 144, 144), rgb(0, 0, 0));
+  z-index: -1;
+}
+
+nav {
+  box-shadow: 0 10px 6px -6px black;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  padding: 1rem;
+  font-size: 1.15rem;
+}
+nav ul li a {
+  transition: all 0.3s ease;
+}
+nav ul li a:hover {
+  color: yellow;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main h1 {
+  font-size: 3rem;
+  font-weight: 550;
+  margin: 1rem;
+}
+main .up, main .down, main .reset {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  margin: 1rem 0.5rem;
+}
+main .up:hover, main .down:hover, main .reset:hover {
+  cursor: pointer;
+}
+main form .remove {
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+main form .grader input, main form .grader select {
+  font-size: 1.05rem;
+  padding: 0.5rem;
+  border: 0.25px solid rgb(39, 39, 21);
+  border-radius: 0.25rem;
+  margin: 0.35rem;
+}
+main form .grader button {
+  border: none;
+  cursor: pointer;
+  background-color: #272727;
+}
+main form .grader button i {
+  font-size: 1.25rem;
+  color: white;
+  pointer-events: none;
+}
+main .plus {
+  margin: 2rem;
+  border: none;
+  cursor: pointer;
+  background-color: #272727;
+}
+main .plus i {
+  font-size: 2.5rem;
+  color: white;
+  pointer-events: none;
+}
+main .result {
+  width: 200px;
+  height: 200px;
+  border: 3px solid red;
+  border-radius: 99em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: border_color 8s infinite;
+}
+main .result p {
+  font-size: 1.15rem;
+}
+main .result h1 {
+  margin: 0.5rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+/* 圓框顏色變化 */
+@keyframes border_color {
+  0% {
+    border-color: red;
+  }
+  33% {
+    border-color: limegreen;
+  }
+  66% {
+    border-color: yellow;
+  }
+}
+/* 新增一條的出場動畫 */
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=index.css.map */
